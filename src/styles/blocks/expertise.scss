@@ -13,11 +13,17 @@
   &__services {
     display: grid;
     row-gap: 56px;
-    padding-inline: 54px;
+    padding-inline: 20px;
+    justify-items: center;
+
+    @include on-tablet {
+      padding-inline: 54px;
+    }
 
     @include on-small-desktop {
       grid-template-columns: repeat(3, 1fr);
       column-gap: 137px;
+      padding-inline: 0;
     }
 
     @include on-the-design {
@@ -71,12 +77,17 @@
   }
 
   &__categories {
+    display: block;
+    max-width: 264px;
+    width: 100%;
+    margin-inline: auto;
+
     @include on-tablet {
-      margin-inline: 98px;
+      margin-inline: auto;
     }
 
     @include on-small-desktop {
-      margin-inline: 0;
+      margin-inline: auto;
     }
 
     font-family: 'Open Sans', sans-serif;
